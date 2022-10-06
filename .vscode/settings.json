@@ -1,0 +1,13 @@
+{
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#7C21D7",
+        "statusBar.debuggingBackground": "#7C21D7",
+        "statusBar.noFolderBackground": "#7C21D7",
+        "statussBar.prominentBackground": "#7C21D7"
+    },
+    "i18n-ally.localesPaths": [
+        "public/locales",
+        "src/shared/config/i18n"
+    ],
+    "i18n-ally.keystyle": "flat"
+}

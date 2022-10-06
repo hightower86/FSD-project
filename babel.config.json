@@ -1,7 +1,6 @@
 {
   "presets": ["@babel/preset-env"],
-    "plugins": [
+  "plugins": [
     "i18next-extract"
-    // […] your other plugins […]
   ]
 }

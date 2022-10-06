@@ -1,4 +1,4 @@
-.navbar{
+.Navbar {
     width: 100%;
     height: var(--navbar-height);
     background: var(--inverted-bg-color);
@@ -9,10 +9,6 @@
 
 .links {
     margin-left: auto;
-    color: var(--inverted-primary-color);
-  &  > a:link {
-        color: 'red'
-    };
 }
 
 .mainLink {

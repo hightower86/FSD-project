@@ -1,0 +1,44 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "overrides": [
+        {
+            "files": ["*.ts", "*.tsx"]
+        }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "rules": {
+        "indent": [2, 4],
+        "@typescript-eslint/consistent-type-imports": "off",
+        "react/jsx-filename-extension": [
+            2,
+            { "extensions": [".js", ".jsx", ".tsx"] }
+        ],
+        "import/no-unresolved": "off",
+        "import/extensions": "off",
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/no-duplicates": "off",
+        "import/named": "off",
+        "react/react-in-jsx-scope": "off",
+        "no-constant-binary-expression": "off",
+        "react/function-component-definition": "off",
+        "react/require-default-props": "off",
+        "react/button-has-type": "off"
+    },
+    "settings": {
+        "import/resolver": "webpack"
+    }
+}

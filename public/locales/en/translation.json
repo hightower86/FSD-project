@@ -1,5 +1,7 @@
 {
-    "test translation": "Test translation",
-    "translation": "translation",
-    "language": "Language"
+  "Тестовый пример": "Test example",
+  "Перевод": "Translate",
+  "Главная страница": "Main page",
+  "Язык": "English",
+  "новый перевод": "новый перевод"
 }

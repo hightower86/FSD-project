@@ -5,5 +5,10 @@
   "Язык": "English",
   "новый перевод": "новый перевод",
   "PageNotFound": "Page not found",
-  "loading": "Loading ..."
+  "loading": "Loading ...",
+  "mainPage": "Main",
+  "aboutMenu": "About",
+  "errorPage": "Something went wrong!",
+  "reloadPage": "Reload Page",
+  "throwError": "Throw error"
 }

@@ -41,6 +41,7 @@ module.exports = {
         'react/jsx-wrap-multilines': ['warn', {}],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': ['error', { ignoreComments: true }],
+        'comma-dangle': 'off',
     },
     globals: {
         __IS_DEV__: true,

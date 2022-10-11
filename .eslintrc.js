@@ -40,7 +40,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['warn'],
         'react/jsx-wrap-multilines': ['warn', {}],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
         'comma-dangle': 'off',
     },
     globals: {

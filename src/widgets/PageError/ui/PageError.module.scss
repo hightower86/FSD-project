@@ -1,0 +1,12 @@
+.PageError {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #00000023;
+    color: red;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

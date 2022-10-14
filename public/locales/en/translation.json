@@ -10,5 +10,6 @@
   "aboutMenu": "About",
   "errorPage": "Something went wrong!",
   "reloadPage": "Reload Page",
-  "throwError": "Throw error"
+  "throwError": "Throw error",
+  "toggle": "Toggle"
 }

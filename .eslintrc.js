@@ -39,7 +39,10 @@ module.exports = {
         'no-underscore-dangle': 'off',
         '@typescript-eslint/no-unused-vars': ['warn'],
         'react/jsx-wrap-multilines': ['warn', {}],
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': [
+            'error',
+            { markupOnly: true, ignoreAttribute: ['data-testid'] },
+        ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
         'comma-dangle': 'off',
     },

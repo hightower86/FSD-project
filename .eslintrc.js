@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'plugin:storybook/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -24,7 +25,9 @@ module.exports = {
         indent: [2, 4],
         'react/jsx-filename-extension': [
             2,
-            { extensions: ['.js', '.ts', '.jsx', '.tsx'] },
+            {
+                extensions: ['.js', '.ts', '.jsx', '.tsx'],
+            },
         ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
@@ -39,11 +42,22 @@ module.exports = {
         'no-underscore-dangle': 'off',
         '@typescript-eslint/no-unused-vars': ['warn'],
         'react/jsx-wrap-multilines': ['warn', {}],
+        'implicit-arrow-linebreak': 'off',
+        'object-curly-newline': 'off',
         'i18next/no-literal-string': [
             'error',
-            { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid', 'to', 'size', 'label'],
+            },
         ],
-        'max-len': ['error', { ignoreComments: true, code: 100 }],
+        'max-len': [
+            'error',
+            {
+                ignoreComments: true,
+                code: 120,
+            },
+        ],
         'comma-dangle': 'off',
     },
     globals: {

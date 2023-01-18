@@ -2,12 +2,14 @@ name: linting, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
     push:
-        branches: [main]
+        branches:
+            - main
     pull_request:
-        branches: [main]
+        branches:
+            - main
 jobs:
     pipeline:
-        runs-on: ubuntu-latest
+        runs-on: macos-latest
         strategy:
             matrix:
                 node-version: [17.x]
@@ -28,5 +30,7 @@ jobs:
               run: npm run lint:css
             - name: unit testing
               run: npm run test:unit
-            - name: unit testing
-              run: npm run test:unit
+            - name: build storybook
+              run: npm run storybook:build
+            - name: screenshot testing
+              run: npm run test:ui:ci

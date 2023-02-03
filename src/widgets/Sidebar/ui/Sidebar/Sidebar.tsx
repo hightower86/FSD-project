@@ -2,8 +2,12 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme, ButtonSize } from 'shared/ui/Button/Button';
 import { useTranslation } from 'react-i18next';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import HomeIcon from 'shared/assets/icons/home.svg';
+import AboutIcon from 'shared/assets/icons/about.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -26,12 +30,37 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 className,
             ])}
         >
-            <Button data-testid="sidebar-toggle" onClick={onToggle}>
-                {t('toggle')}
+            <div className={cls.menuItems}>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    to={RoutePath.main}
+                    className={cls.link}
+                >
+                    <HomeIcon className={cls.icon} />
+                    <span className={cls.text}>{t('mainPage')}</span>
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    className={cls.link}
+                    to={RoutePath.about}
+                >
+                    <AboutIcon className={cls.icon} />
+                    <span className={cls.text}>{t('aboutMenu')}</span>
+                </AppLink>
+            </div>
+            <Button
+                data-testid="sidebar-toggle"
+                onClick={onToggle}
+                className={cls.collapseButton}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
+                size={ButtonSize.L}
+                square
+            >
+                {!collapsed ? '<' : '>'}
             </Button>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
-                <LangSwitcher className={cls.lang} />
+                <LangSwitcher className={cls.lang} short={collapsed} />
             </div>
         </div>
     );

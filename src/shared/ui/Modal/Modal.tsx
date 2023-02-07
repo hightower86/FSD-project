@@ -1,3 +1,4 @@
+import { useTheme } from 'app/providers/ThemeProvider';
 import React, {
     ReactNode,
     useCallback,
@@ -20,6 +21,8 @@ export const Modal = (props: ModalProps) => {
     const { className, children, isOpen = false, onClose } = props;
 
     const [isClosing, setIsClosing] = useState<boolean>(false);
+
+    const { theme } = useTheme();
 
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -66,7 +69,7 @@ export const Modal = (props: ModalProps) => {
     return (
         <Portal>
             <div
-                className={classNames(cls.Modal, mods, [className])}
+                className={classNames(cls.Modal, mods, [className, cls[theme]])}
                 onClick={closeHandler}
             >
                 <div className={cls.overlay}>

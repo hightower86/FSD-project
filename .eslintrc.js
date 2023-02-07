@@ -18,7 +18,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint'],
+    plugins: ['react', '@typescript-eslint', 'react-hooks'],
     rules: {
         'react/jsx-indent': [2, 4],
         'react/jsx-indent-props': [2, 4],
@@ -44,6 +44,8 @@ module.exports = {
         'react/jsx-wrap-multilines': ['warn', {}],
         'implicit-arrow-linebreak': 'off',
         'object-curly-newline': 'off',
+        'jsx-a11y/click-events-have-key-events': 'off',
+        'jsx-a11y/no-static-element-interactions': 'off',
         'i18next/no-literal-string': [
             'error',
             {
@@ -59,6 +61,8 @@ module.exports = {
             },
         ],
         'comma-dangle': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
     },
     globals: {
         __IS_DEV__: true,

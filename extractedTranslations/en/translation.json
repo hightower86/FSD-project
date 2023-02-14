@@ -3,6 +3,7 @@
   "aboutMenu": "aboutMenu",
   "errorPage": "errorPage",
   "loading": "loading",
+  "login": "login",
   "mainPage": "mainPage",
   "reloadPage": "reloadPage",
   "throwError": "throwError",

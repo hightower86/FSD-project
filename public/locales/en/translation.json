@@ -12,5 +12,6 @@
   "errorPage": "Something went wrong!",
   "reloadPage": "Reload Page",
   "throwError": "Throw error",
-  "toggle": "Toggle"
+  "toggle": "Toggle",
+  "login": "login"
 }

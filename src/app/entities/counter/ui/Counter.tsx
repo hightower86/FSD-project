@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'shared/ui/Button/Button';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
@@ -10,9 +11,13 @@ export const Counter = () => {
     const decrement = () => dispatch(counterActions.decrement());
     return (
         <div>
-            <h1>{value}</h1>
-            <Button onClick={increment}>increment</Button>
-            <Button onClick={decrement}>decrement</Button>
+            <h1 data-testid="value-title">{value}</h1>
+            <Button onClick={increment} data-testid="btn-increment">
+                increment
+            </Button>
+            <Button onClick={decrement} data-testid="btn-decrement">
+                decrement
+            </Button>
         </div>
     );
 };

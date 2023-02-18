@@ -4,12 +4,10 @@ import { Sidebar } from './Sidebar';
 
 describe('Sidebar', () => {
     test('Test render Sidebar', () => {
-        // eslint-disable-next-line i18next/no-literal-string
         componentRender(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
     test('Test toggle', () => {
-        // eslint-disable-next-line i18next/no-literal-string
         componentRender(<Sidebar />);
         const toggleBtn = screen.getByTestId('sidebar-toggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();

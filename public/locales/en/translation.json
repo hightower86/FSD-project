@@ -13,5 +13,7 @@
   "reloadPage": "Reload Page",
   "throwError": "Throw error",
   "toggle": "Toggle",
-  "login": "login"
+  "login": "login",
+  "increment": "increment",
+  "decrement": "decrement"
 }

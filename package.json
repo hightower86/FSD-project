@@ -106,5 +106,6 @@
         "preset": "iPhone 7"
       }
     }
-  }
+  },
+  "jestrunner.configPath": "/config/jest/jest.config.ts"
 }

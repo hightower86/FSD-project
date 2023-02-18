@@ -29,7 +29,7 @@ export default {
     coveragePathIgnorePatterns: ['/node_modules/'],
 
     // An array of directory names to be searched recursively up from the requiring module's location
-    moduleDirectories: ['node_modules'],
+    moduleDirectories: ['node_modules', 'src'],
 
     modulePaths: ['<rootDir>src'],
     // modulePaths: ['<rootDir>'],

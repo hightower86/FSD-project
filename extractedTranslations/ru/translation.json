@@ -1,7 +1,9 @@
 {
   "PageNotFound": "PageNotFound",
   "aboutMenu": "aboutMenu",
+  "decrement": "decrement",
   "errorPage": "errorPage",
+  "increment": "increment",
   "loading": "loading",
   "login": "login",
   "mainPage": "mainPage",

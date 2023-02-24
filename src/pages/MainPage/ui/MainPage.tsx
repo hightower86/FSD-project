@@ -1,4 +1,4 @@
-import { Counter } from 'app/entities/Counter';
+import { Counter } from 'entities/Counter';
 import { BugButton } from 'app/providers/ErrorBoundary/ui/BugButton';
 import { useTranslation } from 'react-i18next';
 

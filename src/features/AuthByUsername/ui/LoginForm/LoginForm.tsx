@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize } from 'shared/ui/Button/Button';
@@ -7,20 +7,13 @@ import cls from './LoginForm.module.scss';
 
 interface LoginFormProps {
     className?: string;
-    isOpen?: boolean;
 }
 
 export const LoginForm = (props: LoginFormProps) => {
-    const { className, isOpen } = props;
+    const { className } = props;
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
-    const usernameInput = useRef(null);
-
-    useEffect(() => {
-        usernameInput?.current?.focus();
-    }, [isOpen]);
 
     const { t } = useTranslation();
 
@@ -34,7 +27,6 @@ export const LoginForm = (props: LoginFormProps) => {
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
             <Input
-                ref={usernameInput}
                 value={username}
                 onChange={onUserNameChange}
                 placeholder={t('Введите username')}

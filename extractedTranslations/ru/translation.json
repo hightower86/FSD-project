@@ -1,4 +1,5 @@
 {
+  "": "",
   "PageNotFound": "PageNotFound",
   "aboutMenu": "aboutMenu",
   "decrement": "decrement",
@@ -10,6 +11,9 @@
   "reloadPage": "reloadPage",
   "throwError": "throwError",
   "toggle": "toggle",
+  "Введите username": "Введите username",
+  "Введите пароль": "Введите пароль",
+  "Войти": "Войти",
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
   "О сайте123123": "О сайте123123",

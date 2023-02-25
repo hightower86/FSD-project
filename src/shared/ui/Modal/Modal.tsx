@@ -1,4 +1,3 @@
-import { useTheme } from 'app/providers/ThemeProvider';
 import React, {
     ReactNode,
     useCallback,
@@ -21,8 +20,6 @@ export const Modal = (props: ModalProps) => {
     const { className, children, isOpen = false, onClose } = props;
 
     const [isClosing, setIsClosing] = useState<boolean>(false);
-
-    const { theme } = useTheme();
 
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
@@ -65,6 +62,10 @@ export const Modal = (props: ModalProps) => {
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
+
+    if (!isOpen) {
+        return null;
+    }
 
     return (
         <Portal>

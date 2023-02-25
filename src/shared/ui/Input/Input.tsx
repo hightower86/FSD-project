@@ -1,7 +1,6 @@
 import {
     ChangeEvent,
     InputHTMLAttributes,
-    LegacyRef,
     memo,
     SyntheticEvent,
     useState,
@@ -19,7 +18,6 @@ interface InputProps extends HTMLInputProps {
     value?: string;
     onChange?: (value: string) => void;
     autofocus?: boolean;
-    ref?: LegacyRef<HTMLInputElement>;
 }
 
 export const Input = memo((props: InputProps) => {

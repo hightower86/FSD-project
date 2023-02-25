@@ -39,12 +39,38 @@
     z-index: var(--modal-z-index);
 
     .content {
-        transform: scale(1);
+        animation-name: open-modal;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
     }
 }
 
 .closing {
     .content {
-        transform: scale(0.2);
+        animation-name: close-modal;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes open-modal {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes close-modal {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
     }
 }

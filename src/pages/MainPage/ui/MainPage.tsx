@@ -1,8 +1,8 @@
-import { Counter } from 'entities/Counter';
 import { BugButton } from 'app/providers/ErrorBoundary/ui/BugButton';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import { Input } from 'shared/ui/Input/Input';
+import { Counter } from 'entities/Counter';
 
 const MainPage = () => {
     const { t } = useTranslation();
@@ -22,7 +22,7 @@ const MainPage = () => {
             <Input
                 value={value}
                 onChange={onChange}
-                placeholder="Введите текст"
+                placeholder={t('Введите текст')}
             />
         </div>
     );

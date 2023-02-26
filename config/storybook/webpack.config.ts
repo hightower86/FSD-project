@@ -8,12 +8,11 @@ export default ({ config }: { config: webpack.Configuration }) => {
         build: '',
         html: '',
         entry: '',
-        src: path.resolve(__dirname, '..', '..', 'src')
+        src: path.resolve(__dirname, '..', '..', 'src'),
     };
     config.resolve!.modules!.push(paths.src);
     config.resolve!.extensions!.push('.ts', '.tsx');
 
-    // eslint-disable-next-line no-param-reassign
     config.module!.rules = config.module!.rules!.map((rule: any) => {
         if (/svg/.test(rule.test)) {
             return { ...rule, exclude: /\.svg$/i };
@@ -26,6 +25,11 @@ export default ({ config }: { config: webpack.Configuration }) => {
         use: ['@svgr/webpack'],
     });
     config.module?.rules?.push(buildCssLoader(true));
+    config.plugins?.push(
+        new webpack.DefinePlugin({
+            __IS_DEV__: true,
+        })
+    );
 
     return config;
 };

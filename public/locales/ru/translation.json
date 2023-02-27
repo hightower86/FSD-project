@@ -20,5 +20,6 @@
   "enterPassword": "Введите пароль",
   "enterUsername": "Имя пользователя",
   "wrongPassword": "Неверный пароль или имя пользователя",
-  "loginForm": "Авторизация"
+  "loginForm": "Авторизация",
+  "logout": "Выйти"
 }

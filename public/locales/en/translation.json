@@ -21,5 +21,6 @@
   "enterPassword": "Enter password",
   "enterUsername": "Username",
   "wrongPassword": "Incorrect username or password",
-  "loginForm": "Authorization"
+  "loginForm": "Authorization",
+  "logout": "Logout"
 }

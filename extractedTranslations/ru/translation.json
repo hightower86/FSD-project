@@ -12,6 +12,7 @@
   "loading": "loading",
   "login": "login",
   "loginForm": "loginForm",
+  "logout": "logout",
   "mainPage": "mainPage",
   "reloadPage": "reloadPage",
   "throwError": "throwError",

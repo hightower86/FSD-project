@@ -15,5 +15,11 @@
   "toggle": "Toggle",
   "login": "login",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "неверный пароль": "Wrong username or password",
+  "enter": "Login",
+  "enterPassword": "Enter password",
+  "enterUsername": "Username",
+  "wrongPassword": "Incorrect username or password",
+  "loginForm": "Authorization"
 }

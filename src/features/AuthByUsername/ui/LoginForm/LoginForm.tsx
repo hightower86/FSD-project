@@ -5,7 +5,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 
-import { Loader } from 'shared/ui/Loader/Loader';
+import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { loginActions } from '../../model/slice/loginSlice';
 import { loginByUsername } from '../../model/services/loginByUsername';
 import cls from './LoginForm.module.scss';
@@ -46,18 +46,25 @@ export const LoginForm = memo((props: LoginFormProps) => {
 
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
-            {error && <div>{error}</div>}
+            <Text theme={TextTheme.PRIMARY} title={t('loginForm')} />
+            {error && (
+                <Text
+                    text={error}
+                    theme={TextTheme.ERROR}
+                    className={cls.errorMessage}
+                />
+            )}
             <Input
                 value={username}
                 onChange={onChangeUsername}
-                placeholder={t('Введите username')}
+                placeholder={t('enterUsername')}
                 autoFocus
             />
             <Input
                 value={password}
                 onChange={onChangePassword}
                 type="password"
-                placeholder={t('Введите пароль')}
+                placeholder={t('enterPassword')}
             />
             <Button
                 className={cls.btn}
@@ -66,7 +73,7 @@ export const LoginForm = memo((props: LoginFormProps) => {
                 onClick={onLoginClick}
                 disabled={isLoading}
             >
-                {t('Войти')}
+                {t('enter')}
             </Button>
         </div>
     );

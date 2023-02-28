@@ -5,7 +5,6 @@ import { StyleDecorator } from '../../src/shared/config/storybook/StyleDecorator
 import { RouteDecorator } from '../../src/shared/config/storybook/RouteDecorator/RouteDecorator';
 // eslint-disable-next-line max-len
 import { StoreProviderDecorator } from '../../src/shared/config/storybook/StoreProviderDecorator/StoreProviderDecorator';
-import { TranslationDecorator } from '../../src/shared/config/storybook/TranslationDecorator/TranslationDecorator';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -20,5 +19,4 @@ export const parameters = {
 addDecorator(StyleDecorator);
 addDecorator(RouteDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
-addDecorator(StoreProviderDecorator);
-addDecorator(TranslationDecorator);
+// addDecorator(StoreProviderDecorator);

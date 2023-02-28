@@ -49,7 +49,7 @@ export const LoginForm = memo((props: LoginFormProps) => {
             <Text theme={TextTheme.PRIMARY} title={t('loginForm')} />
             {error && (
                 <Text
-                    text={error}
+                    text={t('wrongPassword')}
                     theme={TextTheme.ERROR}
                     className={cls.errorMessage}
                 />

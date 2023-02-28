@@ -31,8 +31,8 @@ export const Dark = Template.bind({});
 Dark.args = {
     className: 'className',
 };
-Dark.decorators = [ThemeDecorator(Theme.DARK)];
 Dark.decorators = [
+    ThemeDecorator(Theme.DARK),
     StoreProviderDecorator({
         login: { username: '123', password: 'asd' },
     }),

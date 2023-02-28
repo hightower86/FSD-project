@@ -17,6 +17,7 @@
   "reloadPage": "reloadPage",
   "throwError": "throwError",
   "toggle": "toggle",
+  "wrongPassword": "wrongPassword",
   "Введите username": "Введите username",
   "Введите пароль": "Введите пароль",
   "Введите текст": "Введите текст",

@@ -5,7 +5,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { Counter } from 'entities/Counter';
 
 const MainPage = () => {
-    const { t } = useTranslation();
+    const { t } = useTranslation('main');
 
     const [value, setValue] = useState('');
 
@@ -15,14 +15,14 @@ const MainPage = () => {
 
     return (
         <div>
-            {t('Главная страница')}
+            {t('main-page')}
             <BugButton />
             <Counter />
             <hr style={{ margin: '20px' }} />
             <Input
                 value={value}
                 onChange={onChange}
-                placeholder={t('Введите текст')}
+                placeholder={t('input-text')}
             />
         </div>
     );

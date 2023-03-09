@@ -18,5 +18,6 @@
   "loginForm": "Authorization",
   "logout": "Logout",
   "ln": "En",
-  "language": "English"
+  "language": "English",
+  "reload-page": "Reload the app"
 }

@@ -19,6 +19,7 @@
   "logout": "logout",
   "main-page": "main-page",
   "mainPage": "mainPage",
+  "reload-page": "reload-page",
   "reloadPage": "reloadPage",
   "ru": "ru",
   "throwError": "throwError",

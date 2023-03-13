@@ -2,6 +2,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
             "type": "node",
             "request": "launch",
             "name": "Debug Tests",
@@ -11,10 +18,8 @@
                 "--i",
                 "-c",
                 "${workspaceFolder}/config/jest/jest.config.ts"
-                // "./config/jest/jest.config.ts"
             ]
         },
-
         {
             "name": "Launch Extension (development)",
             "type": "extensionHost",
@@ -32,6 +37,24 @@
             "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
             "outFiles": ["${workspaceFolder}/out/**/*.js"],
             "preLaunchTask": "npm: compile"
+        },
+        {
+            "type": "node",
+            "name": "vscode-jest-tests.v2",
+            "request": "launch",
+            "args": [
+                "--runInBand",
+                "--watchAll=false",
+                "--testNamePattern",
+                "${jest.testNamePattern}",
+                "--runTestsByPath",
+                "${jest.testFile}"
+            ],
+            "cwd": "/Users/adelrezvanov/Desktop/D/LEARNING/React/ULBITV/production-project",
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "disableOptimisticBPs": true,
+            "program": "/Users/adelrezvanov/Desktop/D/LEARNING/React/ULBITV/production-project/node_modules/.bin/jest"
         }
     ]
 }

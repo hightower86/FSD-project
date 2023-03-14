@@ -12,7 +12,7 @@ export const loginByUsername = createAsyncThunk<
     User,
     LoginByUsernameProps,
     { rejectValue: string }
->('login/fetchByIdStatus', async ({ username, password }, thunkApi) => {
+>('login/loginByUsername', async ({ username, password }, thunkApi) => {
     try {
         const response = await axios.post('http://localhost:8000/login', {
             username,
@@ -32,6 +32,7 @@ export const loginByUsername = createAsyncThunk<
 
         return response.data;
     } catch (e) {
-        return thunkApi.rejectWithValue(e);
+        console.log(e);
+        return thunkApi.rejectWithValue('error');
     }
 });

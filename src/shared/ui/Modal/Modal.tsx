@@ -16,6 +16,8 @@ interface ModalProps {
     onClose?: () => void;
 }
 
+const ANIMATION_DELAY = 300;
+
 export const Modal = (props: ModalProps) => {
     const { className, children, isOpen = false, onClose } = props;
 
@@ -27,8 +29,6 @@ export const Modal = (props: ModalProps) => {
         [cls.opened]: isOpen,
         [cls.closing]: isClosing,
     };
-
-    const ANIMATION_DELAY = 300;
 
     const closeHandler = useCallback(() => {
         if (onClose) {

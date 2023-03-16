@@ -8,6 +8,7 @@ import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import HomeIcon from 'shared/assets/icons/home.svg';
 import AboutIcon from 'shared/assets/icons/about.svg';
+import ProfileIcon from 'shared/assets/icons/profile.svg';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -46,6 +47,14 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 >
                     <AboutIcon className={cls.icon} />
                     <span className={cls.text}>{t('aboutMenu')}</span>
+                </AppLink>
+                <AppLink
+                    theme={AppLinkTheme.SECONDARY}
+                    className={cls.link}
+                    to={RoutePath.profile}
+                >
+                    <ProfileIcon className={cls.icon} />
+                    <span className={cls.text}>{t('profile')}</span>
                 </AppLink>
             </div>
             <Button

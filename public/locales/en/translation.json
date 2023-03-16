@@ -19,5 +19,6 @@
   "logout": "Logout",
   "ln": "En",
   "language": "English",
-  "reload-page": "Reload the app"
+  "reload-page": "Reload the app",
+  "profile": "Profile"
 }

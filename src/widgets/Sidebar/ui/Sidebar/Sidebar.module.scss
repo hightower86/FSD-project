@@ -30,12 +30,6 @@
     .lang {
         margin-left: 0;
     }
-
-    .text {
-        opacity: 0;
-        width: 0;
-        transition: 0.2s opacity;
-    }
 }
 
 .collapseButton {
@@ -52,14 +46,4 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-
-.link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.icon {
-    fill: var(--inverted-primary-color);
 }

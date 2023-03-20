@@ -17,7 +17,7 @@ export const BugButton = ({ className }: BugButtonProps) => {
 
     useEffect(() => {
         if (isError) {
-            throw new Error();
+            throw new Error('error');
         }
     }, [isError]);
 

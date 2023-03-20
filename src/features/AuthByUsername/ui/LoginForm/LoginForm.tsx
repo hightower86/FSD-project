@@ -21,7 +21,7 @@ import { getLoginError } from '../../model/selectors/getLoginError/getLoginError
 
 export interface LoginFormProps {
     className?: string;
-    onSuccess: () => void;
+    onSuccess?: () => void;
 }
 
 const initialReducers: ReducersList = {
@@ -29,7 +29,11 @@ const initialReducers: ReducersList = {
 };
 
 const LoginForm = memo((props: LoginFormProps) => {
-    const { className, onSuccess } = props;
+    const {
+        className,
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        onSuccess,
+    } = props;
 
     const { t } = useTranslation();
 

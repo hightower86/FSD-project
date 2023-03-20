@@ -1,7 +1,6 @@
 import { Reducer } from '@reduxjs/toolkit';
 import { ReduxStoreWithManager } from 'app/providers/StoreProvider';
 import { StateSchemaKey } from 'app/providers/StoreProvider/config/StateSchema';
-import { loginReducer } from 'features/AuthByUsername/model/slice/loginSlice';
 import { FC, useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
 

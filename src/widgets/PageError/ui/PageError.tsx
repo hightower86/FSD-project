@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
@@ -8,7 +7,7 @@ interface PageErrorProps {
     className?: string;
 }
 
-export const PageError = memo(({ className }: PageErrorProps) => {
+export const PageError = ({ className }: PageErrorProps) => {
     const { t } = useTranslation();
 
     const reloadHandle = () => {
@@ -21,4 +20,4 @@ export const PageError = memo(({ className }: PageErrorProps) => {
             <Button onClick={reloadHandle}>{t('reload-page')}</Button>
         </div>
     );
-});
+};

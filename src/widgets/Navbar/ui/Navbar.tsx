@@ -1,7 +1,7 @@
 /* eslint-disable i18next/no-literal-string */
 import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUsername';
-import { memo, useCallback, useEffect, useState } from 'react';
+import { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -15,37 +15,49 @@ interface NavbarProps {
 export const Navbar = memo(({ className }: NavbarProps) => {
     const { t } = useTranslation();
     const [isAuthOpen, setIsAuthOpen] = useState<boolean>(false);
-
+    const authData = useSelector(getUserAuthData);
     const dispatch = useDispatch();
 
-    const userAuthData = useSelector(getUserAuthData);
-
-    useEffect(() => {
-        if (userAuthData) {
-            setIsAuthOpen(false);
-        }
-    }, [userAuthData]);
-
-    const onToggleModal = useCallback(() => {
-        setIsAuthOpen((prev) => !prev);
+    const onModalClose = useCallback(() => {
+        setIsAuthOpen(false);
     }, []);
 
-    const onLogoutClick = useCallback(() => {
+    const onModalOpen = useCallback(() => {
+        setIsAuthOpen(true);
+    }, []);
+
+    const onLogout = useCallback(() => {
         dispatch(userActions.logout());
     }, [dispatch]);
+
+    console.log({ authData });
+
+    if (authData) {
+        return (
+            <div className={classNames(cls.Navbar, {}, [className])}>
+                <Button
+                    className={cls.links}
+                    theme={ButtonTheme.CLEAR_INVERTED}
+                    onClick={onLogout}
+                >
+                    {t('logout')}
+                </Button>
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
             <Button
                 className={cls.links}
                 theme={ButtonTheme.CLEAR_INVERTED}
-                onClick={!userAuthData ? onToggleModal : onLogoutClick}
+                onClick={onModalOpen}
             >
-                {!userAuthData ? t('login') : t('logout')}
+                {t('login')}
             </Button>
 
             {isAuthOpen && (
-                <LoginModal isOpen={isAuthOpen} onClose={onToggleModal} />
+                <LoginModal isOpen={isAuthOpen} onClose={onModalClose} />
             )}
         </div>
     );

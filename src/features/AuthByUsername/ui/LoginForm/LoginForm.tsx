@@ -58,11 +58,17 @@ const LoginForm = memo((props: LoginFormProps) => {
         [dispatch]
     );
 
-    const onLoginClick = useCallback(() => {
-        if (!isLoading) {
-            dispatch(loginByUsername({ username, password }));
+    // const onLoginClick = useCallback(() => {
+    //     if (!isLoading) {
+    //         dispatch(loginByUsername({ username, password }));
+    //     }
+    // }, [dispatch, isLoading, password, username]);
+    const onLoginClick = useCallback(async () => {
+        const result = await dispatch(loginByUsername({ username, password }));
+        if (result.meta.requestStatus === 'fulfilled') {
+            onSuccess();
         }
-    }, [dispatch, isLoading, password, username]);
+    }, [onSuccess, dispatch, password, username]);
 
     return (
         <DynamicModuleLoader reducers={initialReducers} removeAfterUnmount>

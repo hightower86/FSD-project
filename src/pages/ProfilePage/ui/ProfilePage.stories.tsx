@@ -1,9 +1,8 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StoreProviderDecorator } from 'shared/config/storybook/StoreProviderDecorator/StoreProviderDecorator';
-import ProfilePage from './ProfilePage';
 
 export default {
     title: 'pages/ProfilePage',
@@ -13,20 +12,14 @@ export default {
     },
 } as ComponentMeta<typeof ProfilePage>;
 
-const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />;
+const Template: ComponentStory<typeof ProfilePage> = (args) => (
+    <ProfilePage {...args} />
+);
 
-export const Light = Template.bind({});
-Light.decorators = [
-    StoreProviderDecorator({
-        login: { username: '123', password: 'asd' },
-    }),
-];
+export const Normal = Template.bind({});
+Normal.args = {};
+Normal.decorators = [StoreProviderDecorator({})];
 
 export const Dark = Template.bind({});
-
-Dark.decorators = [
-    ThemeDecorator(Theme.DARK),
-    StoreProviderDecorator({
-        login: { username: '123', password: 'asd' },
-    }),
-];
+Dark.args = {};
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreProviderDecorator({})];

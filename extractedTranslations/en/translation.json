@@ -9,6 +9,7 @@
   "enter": "enter",
   "enterPassword": "enterPassword",
   "enterUsername": "enterUsername",
+  "error-profile-loading": "error-profile-loading",
   "errorPage": "errorPage",
   "increment": "increment",
   "input-text": "input-text",
@@ -27,6 +28,7 @@
   "ru": "ru",
   "throwError": "throwError",
   "toggle": "",
+  "try-update-page": "try-update-page",
   "user-profile": "user-profile",
   "wrongPassword": "",
   "your-name": "your-name",
@@ -41,6 +43,11 @@
   "Главная страница": "Главная страница",
   "О сайте": "О сайте",
   "О сайте123123": "О сайте123123",
+  "Отменить": "Отменить",
+  "Попробуйте обновить страницу": "Попробуйте обновить страницу",
+  "Произошла ошибка при загрузке профиля": "Произошла ошибка при загрузке профиля",
+  "Профиль": "Профиль",
   "Редактировать": "Редактировать",
+  "Сохранить": "Сохранить",
   "Язык": "Язык"
 }

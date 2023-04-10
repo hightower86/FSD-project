@@ -3,5 +3,7 @@
   "user-profile": "USER PROFILE",
   "edit": "Edit",
   "your-name": "Your name",
-  "your-sur-name": "Your family name"
+  "your-sur-name": "Your family name",
+  "error-profile-loading": "Profile loading error",
+  "try-update-page": "Try to update the page"
 }

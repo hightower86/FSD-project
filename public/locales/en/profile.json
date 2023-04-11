@@ -11,5 +11,10 @@
   "age": "Your age",
   "city": "City",
   "username": "Input user name",
-  "input-url": "Input avatar url"
+  "input-url": "Input avatar url",
+  "server-error": "Server error",
+  "region-error": "Incorrect region",
+  "no-data": "No data",
+  "name-error": "Name and suname required",
+  "age-error": "Incorrect age"
 }

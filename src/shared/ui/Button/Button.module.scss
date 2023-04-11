@@ -23,6 +23,12 @@
     color: var(--primary-color);
 }
 
+.outlineRed {
+    background: none;
+    border: 1px solid var(--red-light);
+    color: var(--red-light);
+}
+
 .square {
     border-radius: 0;
 }

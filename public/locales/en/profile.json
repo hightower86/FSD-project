@@ -5,5 +5,11 @@
   "your-name": "Your name",
   "your-sur-name": "Your family name",
   "error-profile-loading": "Profile loading error",
-  "try-update-page": "Try to update the page"
+  "try-update-page": "Try to update the page",
+  "cancel": "Cancel",
+  "save": "Edit",
+  "age": "Your age",
+  "city": "City",
+  "username": "Input user name",
+  "input-url": "Input avatar url"
 }

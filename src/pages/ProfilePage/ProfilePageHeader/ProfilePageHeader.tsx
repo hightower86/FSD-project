@@ -8,6 +8,7 @@ import {
     getProfileReadonly,
     // getProfileReadonly,
     profileActions,
+    updateProfileData,
     // updateProfileData,
 } from 'entities/Profile';
 import { useCallback } from 'react';
@@ -35,7 +36,7 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
     }, [dispatch]);
 
     const onSave = useCallback(() => {
-        // dispatch(updateProfileData());
+        dispatch(updateProfileData());
     }, [dispatch]);
 
     return (
@@ -54,14 +55,14 @@ export const ProfilePageHeader = (props: ProfilePageHeaderProps) => {
                 <>
                     <Button
                         className={cls.editBtn}
-                        theme={ButtonTheme.OUTLINE}
+                        theme={ButtonTheme.OUTLINE_RED}
                         onClick={onCancelEdit}
                     >
                         {t('cancel')}
                     </Button>
                     <Button
                         className={cls.saveBtn}
-                        theme={ButtonTheme.OUTLINE_RED}
+                        theme={ButtonTheme.OUTLINE}
                         onClick={onSave}
                     >
                         {t('save')}

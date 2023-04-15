@@ -18,5 +18,8 @@
     "css.validate": true,
     "scss.validate": true,
     "stylelint.validate": ["css", "scss"],
-    "jest.rootPath": "src"
+    "jest.rootPath": "src",
+    "files.associations": {
+    "*.css": "css"
+},
 }

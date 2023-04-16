@@ -1,6 +1,5 @@
 import { ProfileSchema } from 'entities/Profile/model/types/profile';
 import { UserSchema } from 'entities/User/model/types/user';
-import { CounterSchema } from 'entities/Counter';
 import { LoginSchema } from 'features/AuthByUsername';
 import {
     AnyAction,
@@ -13,12 +12,7 @@ import {
 import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
 
-export interface CounterState {
-    value: number;
-}
-
 export interface StateSchema {
-    counter: CounterSchema;
     user: UserSchema;
 
     // Async reducers:

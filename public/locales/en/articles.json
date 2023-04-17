@@ -1,4 +1,5 @@
 {
   "articles-page-title": "ARTICLES PAGE",
-  "article-details-title": "ARTICLE DETAILS"
+  "article-details-title": "ARTICLE DETAILS",
+  "loading-error": "Error happened while loading article."
 }

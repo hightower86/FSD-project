@@ -1,4 +1,5 @@
 {
   "articles-page-title": "СТРАНИЦА СТАТЕЙ",
-  "article-details-title": "ДЕТАЛИ СТАТЬИ СТРАНИЦА"
+  "article-details-title": "ДЕТАЛИ СТАТЬИ СТРАНИЦА",
+  "loading-error": "Произошла ошибка при загрузке статьи."
 }

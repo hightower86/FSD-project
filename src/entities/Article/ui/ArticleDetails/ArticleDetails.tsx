@@ -37,7 +37,7 @@ const reducers: ReducersList = {
 
 export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     const { className, id } = props;
-    const { t } = useTranslation();
+    const { t } = useTranslation('articles');
     const dispatch = useAppDispatch();
     const isLoading = useSelector(getArticleDetailsIsLoading);
     const article = useSelector(getArticleDetailsData);
@@ -98,12 +98,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
             </>
         );
     } else if (error) {
-        content = (
-            <Text
-                align={TextAlign.CENTER}
-                title={t('Произошла ошибка при загрузке статьи.')}
-            />
-        );
+        content = <Text align={TextAlign.CENTER} title={t('loading-error')} />;
     } else {
         content = (
             <>

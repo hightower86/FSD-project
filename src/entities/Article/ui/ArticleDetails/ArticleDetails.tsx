@@ -4,7 +4,7 @@ import {
     DynamicModuleLoader,
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';

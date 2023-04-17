@@ -9,10 +9,12 @@ export default function buildCssLoader(isDev: boolean) {
                 loader: 'css-loader',
                 options: {
                     modules: {
-                        auto: (resPath: string) => Boolean(resPath.includes('.module.')),
+                        auto: (resPath: string) =>
+                            Boolean(resPath.includes('.module.')),
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:5]'
                             : '[hash:base64:8]',
+                        exportLocalsConvention: 'camelCase',
                     },
                 },
             },

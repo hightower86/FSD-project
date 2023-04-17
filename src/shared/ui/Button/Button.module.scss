@@ -3,6 +3,12 @@
     cursor: pointer;
     border-radius: 5px;
     color: var(--primary-color);
+
+    &:hover {
+        opacity: 0.8;
+        fill-opacity: 80%;
+        stroke-opacity: 80%;
+    }
 }
 
 .clear,

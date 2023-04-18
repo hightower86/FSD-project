@@ -1,8 +1,13 @@
 {
   "article-details-title": "",
+  "article-not-found": "",
   "articles-page-title": "",
+  "comments": "",
   "loading-error": "",
+  "no-comments": "",
+  "Комментарии": "",
   "Произошла ошибка при загрузке статьи": {
     "": ""
-  }
+  },
+  "Статья не найдена": ""
 }

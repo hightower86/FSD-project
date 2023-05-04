@@ -4,5 +4,7 @@
   "loading-error": "Error happened while loading article.",
   "no-comments": "No comments",
   "article-not-found": "Article isn't found",
-  "comments": "Comments"
+  "comments": "Comments",
+  "articles.input-comment": "Input comments text",
+  "articles.send-comment": "Send comment"
 }

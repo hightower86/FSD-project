@@ -1,6 +1,6 @@
 import {
-    profileActions,
-    profileReducer,
+    {{pascalCase}}Actions,
+    {{pascalCase}}Reducer,
     {{pascalCase}}Schema,
     update{{pascalCase}}Data,
     Validate{{pascalCase}}Error,
@@ -22,9 +22,9 @@ describe('profileSlice.test', () => {
     test('test set readonly', () => {
         const state: DeepPartial<{{pascalCase}}Schema> = { readonly: false };
         expect(
-            profileReducer(
+            {{pascalCase}}Reducer(
                 state as {{pascalCase}}Schema,
-                profileActions.setReadOnly(true)
+                {{pascalCase}}Actions.setReadOnly(true)
             )
         ).toEqual({ readonly: true });
     });
@@ -36,7 +36,7 @@ describe('profileSlice.test', () => {
         };
 
         expect(
-            profileReducer(state as {{pascalCase}}Schema, profileActions.cancelEdit())
+            {{pascalCase}}Reducer(state as {{pascalCase}}Schema, {{pascalCase}}Actions.cancelEdit())
         ).toEqual({
             readonly: true,
             validateErrors: undefined,
@@ -45,13 +45,13 @@ describe('profileSlice.test', () => {
         });
     });
 
-    test('test update profile', () => {
+    test('test update {{pascalCase}}', () => {
         const state: DeepPartial<{{pascalCase}}Schema> = { form: { username: '123' } };
 
         expect(
-            profileReducer(
+            {{pascalCase}}Reducer(
                 state as {{pascalCase}}Schema,
-                profileActions.update{{pascalCase}}({
+                {{pascalCase}}Actions.update{{pascalCase}}({
                     username: '123456',
                 })
             )
@@ -60,27 +60,27 @@ describe('profileSlice.test', () => {
         });
     });
 
-    test('test update profile service pending', () => {
+    test('test update {{pascalCase}} service pending', () => {
         const state: DeepPartial<{{pascalCase}}Schema> = {
             isLoading: false,
             validateErrors: [Validate{{pascalCase}}Error.SERVER_ERROR],
         };
 
         expect(
-            profileReducer(state as {{pascalCase}}Schema, update{{pascalCase}}Data.pending)
+            {{pascalCase}}Reducer(state as {{pascalCase}}Schema, update{{pascalCase}}Data.pending)
         ).toEqual({
             isLoading: true,
             validateErrors: undefined,
         });
     });
 
-    test('test update profile service fullfiled', () => {
+    test('test update {{pascalCase}} service fullfiled', () => {
         const state: DeepPartial<{{pascalCase}}Schema> = {
             isLoading: true,
         };
 
         expect(
-            profileReducer(
+            {{pascalCase}}Reducer(
                 state as {{pascalCase}}Schema,
                 update{{pascalCase}}Data.fulfilled(data, '')
             )

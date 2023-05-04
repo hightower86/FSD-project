@@ -4,5 +4,7 @@
   "loading-error": "Произошла ошибка при загрузке статьи.",
   "no-comments": "Комментарии отсутствуют",
   "article-not-found": "Статья не найдена",
-  "comments": "Комментарии"
+  "comments": "Комментарии",
+  "articles.input-comment": "Введите текст комментария",
+  "articles.send-comment": "Отправить"
 }

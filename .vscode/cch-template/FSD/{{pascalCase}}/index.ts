@@ -1,20 +1,18 @@
-export { ProfileCard } from './ui/ProfileCard/ProfileCard';
+export { {{camelCase}} } from './ui/{{camelCase}}/{{camelCase}}';
 
 export {
-    Profile,
-    ProfileSchema,
-    ValidateProfileError,
+    {{camelCase}},
+    {{camelCase}}Schema,
+    Validate{{camelCase}}Error,
 } from './model/types/profile';
 
 export { profileActions, profileReducer } from './model/slice/profileSlice';
 
-export { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData';
+export { fetch{{camelCase}}Data } from './model/services/fetch{{camelCase}}Data/fetch{{camelCase}}Data';
 
-export { updateProfileData } from './model/services/updateProfileData/updateProfileData';
+export { update{{camelCase}}Data } from './model/services/update{{camelCase}}Data/update{{camelCase}}Data';
 
-export { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getProfileIsLoading';
-export { getProfileData } from './model/selectors/get{{pascalCase}}Data/get{{pascalCase}}Data';
-export { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
-export { getProfileError } from './model/selectors/getProfileError/get{{pascalCase}}Error';
-export { getProfileReadonly } from './model/selectors/getProfileReadonly/getProfileReadonly';
-export { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
+export { get{{camelCase}}IsLoading } from './model/selectors/get{{camelCase}}IsLoading/get{{camelCase}}IsLoading';
+export { get{{camelCase}}Error } from './model/selectors/get{{camelCase}}Error/get{{pascalCase}}Error';
+export { get{{camelCase}}Readonly } from './model/selectors/get{{camelCase}}Readonly/get{{camelCase}}Readonly';
+export { get{{camelCase}}ValidateErrors } from './model/selectors/get{{camelCase}}ValidateErrors/get{{camelCase}}ValidateErrors';

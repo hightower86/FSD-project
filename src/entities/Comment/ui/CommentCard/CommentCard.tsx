@@ -10,7 +10,7 @@ import { Comment } from '../../model/types/comment';
 
 interface CommentCardProps {
     className?: string;
-    comment: Comment;
+    comment?: Comment;
     isLoading?: boolean;
 }
 
@@ -19,7 +19,12 @@ export const CommentCard = memo((props: CommentCardProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames(cls.CommentCard, {}, [className])}>
+            <div
+                className={classNames(cls.CommentCard, {}, [
+                    className,
+                    cls.loading,
+                ])}
+            >
                 <div className={cls.header}>
                     <Skeleton width={30} height={30} border="50%" />
                     <Skeleton
@@ -31,6 +36,10 @@ export const CommentCard = memo((props: CommentCardProps) => {
                 <Skeleton className={cls.text} width="100%" height={50} />
             </div>
         );
+    }
+
+    if (!comment) {
+        return null;
     }
 
     return (

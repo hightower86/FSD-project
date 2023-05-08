@@ -1,13 +1,10 @@
 {
   "profile-page": "Profile",
   "user-profile": "USER PROFILE",
-  "edit": "Edit",
   "your-name": "Your name",
   "your-sur-name": "Your family name",
   "error-profile-loading": "Profile loading error",
   "try-update-page": "Try to update the page",
-  "cancel": "Cancel",
-  "save": "Edit",
   "age": "Your age",
   "city": "City",
   "username": "Input user name",
@@ -16,5 +13,9 @@
   "region-error": "Incorrect region",
   "no-data": "No data",
   "name-error": "Name and suname required",
-  "age-error": "Incorrect age"
+  "age-error": "Incorrect age",
+  "profile": "Profile",
+  "edit": "Edit",
+  "cancel": "Cancel",
+  "save": "Save"
 }

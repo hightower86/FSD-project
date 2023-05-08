@@ -102,6 +102,42 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "id": "4",
+      "text": "some comment 4",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "text": "some comment 5",
+      "articleId": "1",
+      "userId": "1"
+    },
+    {
+      "artileId": "1",
+      "userId": "1",
+      "text": "Hello comment",
+      "id": "IVYrYoI"
+    },
+    {
+      "artileId": "1",
+      "userId": "1",
+      "text": "Comment 4",
+      "id": "JugCTep"
+    },
+    {
+      "artileId": "1",
+      "userId": "1",
+      "text": "New comment 4",
+      "id": "U3ZFDSQ"
+    },
+    {
+      "artileId": "1",
+      "userId": "2",
+      "text": "New comment user",
+      "id": "ahlERGX"
     }
   ],
   "users": [

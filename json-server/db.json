@@ -138,6 +138,24 @@
       "userId": "2",
       "text": "New comment user",
       "id": "ahlERGX"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "comment",
+      "id": "llUoJ_w"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "User's new comment",
+      "id": "_Elxojv"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Admin's new comment",
+      "id": "vWFdhIn"
     }
   ],
   "users": [

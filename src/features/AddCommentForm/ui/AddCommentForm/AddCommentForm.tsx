@@ -18,15 +18,18 @@ import {
     addCommentFormActions,
     addCommentFormReducer,
 } from '../../model/slice/addCommentFormSlice';
-import { sendComment } from '../../model/services/sendComment/sendComment';
 
 export interface AddCommentFormProps {
     className?: string;
-    // onSendComment: (text: string) => void;
+    onSendComment: (text: string) => void;
 }
 
+const reducers: ReducersList = {
+    addCommentForm: addCommentFormReducer,
+};
+
 const AddCommentForm = (props: AddCommentFormProps) => {
-    const { className } = props;
+    const { className, onSendComment } = props;
     const { t } = useTranslation('articles');
     const text = useSelector(getAddCommentFormText);
     const error = useSelector(getAddCommentFormError);
@@ -39,15 +42,10 @@ const AddCommentForm = (props: AddCommentFormProps) => {
         [dispatch]
     );
 
-    const reducers: ReducersList = {
-        addCommentForm: addCommentFormReducer,
-    };
-
     const onSendHandler = useCallback(() => {
-        // dispatch(onSendComment(text));
-        dispatch(sendComment());
+        onSendComment(text || '');
         onCommentTextChange('');
-    }, [dispatch, onCommentTextChange]);
+    }, [onCommentTextChange, onSendComment, text]);
 
     return (
         <DynamicModuleLoader reducers={reducers}>

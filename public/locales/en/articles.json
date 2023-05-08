@@ -6,5 +6,8 @@
   "article-not-found": "Article isn't found",
   "comments": "Comments",
   "articles.input-comment": "Input comments text",
-  "articles.send-comment": "Send comment"
+  "articles.send-comment": "Send comment",
+  "articles.no-comments": "No comments exist.",
+  "articles.article-not-found": "Article not found",
+  "articles.comments": "Comments"
 }

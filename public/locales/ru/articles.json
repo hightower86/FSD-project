@@ -6,5 +6,8 @@
   "article-not-found": "Статья не найдена",
   "comments": "Комментарии",
   "articles.input-comment": "Введите текст комментария",
-  "articles.send-comment": "Отправить"
+  "articles.send-comment": "Отправить",
+  "articles.no-comments": "Нет комментариев.",
+  "articles.article-not-found": "Статья не найдена.",
+  "articles.comments": "Комментарии"
 }

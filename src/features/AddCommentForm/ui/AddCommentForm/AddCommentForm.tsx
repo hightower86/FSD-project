@@ -18,18 +18,19 @@ import {
     addCommentFormActions,
     addCommentFormReducer,
 } from '../../model/slice/addCommentFormSlice';
+import { sendComment } from '../../model/services/sendComment/sendComment';
 
 export interface AddCommentFormProps {
     className?: string;
+    // onSendComment: (text: string) => void;
 }
 
 const AddCommentForm = (props: AddCommentFormProps) => {
+    const { className } = props;
     const { t } = useTranslation('articles');
     const text = useSelector(getAddCommentFormText);
     const error = useSelector(getAddCommentFormError);
     const dispatch = useAppDispatch();
-
-    const { className } = props;
 
     const onCommentTextChange = useCallback(
         (value: string) => {
@@ -42,15 +43,23 @@ const AddCommentForm = (props: AddCommentFormProps) => {
         addCommentForm: addCommentFormReducer,
     };
 
+    const onSendHandler = useCallback(() => {
+        // dispatch(onSendComment(text));
+        dispatch(sendComment());
+        onCommentTextChange('');
+    }, [dispatch, onCommentTextChange]);
+
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <div className={classNames(cls.wrapper, {}, [className])}>
+            <div className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
                     placeholder={t('input-comment')}
                     value={text}
                     onChange={onCommentTextChange}
                 />
-                <Button theme={ButtonTheme.OUTLINE}>{t('send-comment')}</Button>
+                <Button theme={ButtonTheme.OUTLINE} onClick={onSendHandler}>
+                    {t('send-comment')}
+                </Button>
             </div>
         </DynamicModuleLoader>
     );

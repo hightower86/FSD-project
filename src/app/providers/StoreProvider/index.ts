@@ -3,6 +3,6 @@ export {
     ReduxStoreWithManager,
     ThunkExtraArg,
     ThunkConfig,
-} from './config/stateSchema';
+} from './config/StateSchema';
 export { StoreProvider } from './ui/StoreProvider';
 export { createReduxStore, AppDispatch } from './config/store';

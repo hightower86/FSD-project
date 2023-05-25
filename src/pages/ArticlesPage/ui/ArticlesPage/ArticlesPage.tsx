@@ -87,7 +87,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
             <ArticleList
                 isLoading
-                view={ArticleView.BIG}
+                view={ArticleView.SMALL}
                 articles={[article]}
             />
         </div>

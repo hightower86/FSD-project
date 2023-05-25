@@ -88,7 +88,9 @@ const ArticlesPage = (props: ArticlesPageProps) => {
             <ArticleList
                 isLoading
                 view={ArticleView.SMALL}
-                articles={[article]}
+                articles={new Array(16)
+                    .fill(0)
+                    .map((_, index) => ({ ...article, id: String(index) }))}
             />
         </div>
     );

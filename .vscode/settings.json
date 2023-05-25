@@ -22,4 +22,5 @@
     "files.associations": {
     "*.css": "css"
 },
+"prettier.htmlWhitespaceSensitivity": "ignore",
 }

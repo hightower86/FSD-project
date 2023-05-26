@@ -27,7 +27,7 @@ const articlesPageSlice = createSlice({
         view: ArticleView.SMALL,
     }),
     reducers: {
-        setVeiw: (state, action: PayloadAction<ArticleView>) => {
+        setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
             localStorage.setItem(
                 ARTICLES_VIEW_LOCALSTORAGE_KEY,

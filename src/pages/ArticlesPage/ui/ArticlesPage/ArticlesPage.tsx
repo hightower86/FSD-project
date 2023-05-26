@@ -1,8 +1,13 @@
 /* eslint-disable max-len */
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { memo } from 'react';
-import { Article, ArticleList, ArticleView } from 'entities/Article';
+import { memo, useCallback } from 'react';
+import {
+    Article,
+    ArticleList,
+    ArticleView,
+    ArticleViewSelector,
+} from 'entities/Article';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -41,6 +46,13 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const view = useSelector(getArticlesPageView);
     const error = useSelector(getArticlesPageError);
 
+    const onChangeView = useCallback(
+        (view: ArticleView) => {
+            dispatch(articlesPageActions.setView(view));
+        },
+        [dispatch]
+    );
+
     useInitialEffect(() => {
         dispatch(fetchArticleLists());
         dispatch(articlesPageActions.initState());
@@ -48,6 +60,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
+            <ArticleViewSelector view={view} onViewClick={onChangeView} />
             <div className={classNames(cls.ArticlesPage, {}, [className])}>
                 <ArticleList
                     isLoading={isLoading}

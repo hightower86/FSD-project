@@ -5,9 +5,12 @@
   "no-comments": "No comments",
   "article-not-found": "Article isn't found",
   "comments": "Comments",
-  "articles.input-comment": "Input comments text",
-  "articles.send-comment": "Send comment",
+  "input-comment": "Input comments text",
+  "send-comment": "Send comment",
   "articles.no-comments": "No comments exist.",
   "articles.article-not-found": "Article not found",
-  "articles.comments": "Comments"
+  "articles.comments": "Comments",
+  "read-more": "Read more ...",
+  "articles.back-to-list": "Back to list",
+  "back-to-list": "Back to list"
 }

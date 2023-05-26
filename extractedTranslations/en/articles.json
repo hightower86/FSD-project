@@ -2,14 +2,23 @@
   "article-details-title": "",
   "article-not-found": "",
   "articles-page-title": "",
+  "back-to-list": "",
   "comments": "",
   "input-comment": "",
   "loading-error": "",
   "no-comments": "",
+  "read-more": "",
   "send-comment": "",
   "Комментарии": "",
   "Произошла ошибка при загрузке статьи": {
     "": ""
   },
-  "Статья не найдена": ""
+  "Статья не найдена": "",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }

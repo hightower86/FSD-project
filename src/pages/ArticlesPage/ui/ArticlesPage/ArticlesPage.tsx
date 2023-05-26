@@ -16,6 +16,11 @@ const article = {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
+    user: {
+        id: '1',
+        username: 'Иван Иванов',
+        avatar: 'https://i.pravatar.cc/300',
+    },
     type: ['IT'],
     blocks: [
         {
@@ -87,7 +92,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
             <ArticleList
                 isLoading
-                view={ArticleView.SMALL}
+                view={ArticleView.BIG}
                 articles={new Array(16)
                     .fill(0)
                     .map((_, index) => ({ ...article, id: String(index) }))}

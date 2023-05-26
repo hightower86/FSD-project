@@ -4,10 +4,12 @@
   "loading-error": "Произошла ошибка при загрузке статьи.",
   "no-comments": "Комментарии отсутствуют",
   "article-not-found": "Статья не найдена",
-  "comments": "Комментарии",
-  "articles.input-comment": "Введите текст комментария",
-  "articles.send-comment": "Отправить",
+  "articles.comments": "Комментарии",
+  "input-comment": "Введите текст комментария",
+  "send-comment": "Отправить",
   "articles.no-comments": "Нет комментариев.",
   "articles.article-not-found": "Статья не найдена.",
-  "articles.comments": "Комментарии"
+  "read-more": "Читать далее...",
+  "articles.back-to-list": "Назад к списку",
+  "back-to-list": "Назад к списку"
 }

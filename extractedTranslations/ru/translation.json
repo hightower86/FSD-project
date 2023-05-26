@@ -9,6 +9,7 @@
   "article-details-title": "article-details-title",
   "article-not-found": "article-not-found",
   "articles-page-title": "articles-page-title",
+  "back-to-list": "back-to-list",
   "cancel": "cancel",
   "city": "city",
   "comments": "comments",
@@ -37,6 +38,7 @@
   "no-data": "no-data",
   "profile": "profile",
   "profile-page": "profile-page",
+  "read-more": "read-more",
   "region-error": "region-error",
   "reload-page": "reload-page",
   "reloadPage": "reloadPage",
@@ -82,5 +84,12 @@
   "Статья не найдена": "Статья не найдена",
   "Укажите валюту": "Укажите валюту",
   "Укажите страну": "Укажите страну",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
   "Язык": "Язык"
 }

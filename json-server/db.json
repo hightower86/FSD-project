@@ -19,6 +19,7 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -104,58 +105,52 @@
       "userId": "1"
     },
     {
-      "id": "4",
-      "text": "some comment 4",
       "articleId": "1",
-      "userId": "1"
+      "userId": "1",
+      "text": "123",
+      "id": "4Cljjzl"
     },
     {
-      "id": "5",
-      "text": "some comment 5",
       "articleId": "1",
-      "userId": "1"
-    },
-    {
-      "artileId": "1",
       "userId": "1",
-      "text": "Hello comment",
-      "id": "IVYrYoI"
-    },
-    {
-      "artileId": "1",
-      "userId": "1",
-      "text": "Comment 4",
-      "id": "JugCTep"
-    },
-    {
-      "artileId": "1",
-      "userId": "1",
-      "text": "New comment 4",
-      "id": "U3ZFDSQ"
-    },
-    {
-      "artileId": "1",
-      "userId": "2",
-      "text": "New comment user",
-      "id": "ahlERGX"
+      "text": "123asfasf",
+      "id": "AEM4Dvc"
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "comment",
-      "id": "llUoJ_w"
+      "text": "123asfasf",
+      "id": "IFEOWl0"
     },
     {
       "articleId": "1",
       "userId": "2",
-      "text": "User's new comment",
-      "id": "_Elxojv"
+      "text": "привет мир",
+      "id": "dBacYRZ"
     },
     {
       "articleId": "1",
-      "userId": "1",
-      "text": "Admin's new comment",
-      "id": "vWFdhIn"
+      "userId": "2",
+      "text": "хехехехе",
+      "id": "rBX_C-e"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "фыафыа",
+      "id": "5k0ApX-"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "sdfsdfsd",
+      "id": "w-HDIRq"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asdasdasd",
+      "id": "MVvGQoZ"
     }
   ],
   "users": [
@@ -177,7 +172,7 @@
   "profile": [
     {
       "id": "1",
-      "first": "NameMy",
+      "first": "jgh",
       "lastname": "asf",
       "age": 465,
       "currency": "RUB",

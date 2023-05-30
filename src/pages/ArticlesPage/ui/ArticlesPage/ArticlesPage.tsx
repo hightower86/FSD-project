@@ -54,8 +54,8 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     );
 
     useInitialEffect(() => {
-        dispatch(fetchArticleLists());
         dispatch(articlesPageActions.initState());
+        dispatch(fetchArticleLists({ page: 1 }));
     });
 
     return (

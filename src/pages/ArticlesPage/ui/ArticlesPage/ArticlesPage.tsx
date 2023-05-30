@@ -14,7 +14,7 @@ import {
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { fetchArticleLists } from 'pages/ArticlesPage/model/services/fetchArticleLists/fetchArticleLists';
+import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import { useSelector } from 'react-redux';
 import { get } from 'http';
 import { Page } from 'shared/ui/Page/Page';
@@ -28,7 +28,9 @@ import {
     getArticlesPageIsLoading,
     getArticlesPageError,
     getArticlesPageView,
+    getArticlesPageNum,
 } from '../../model/selectors/articlesPageSelectors';
+import { fetchNextArticlesPage } from '../../model/services/fetchNextArticlesPage/fetchNextArticlesPage';
 
 interface ArticlesPageProps {
     className?: string;
@@ -46,6 +48,7 @@ const ArticlesPage = (props: ArticlesPageProps) => {
     const isLoading = useSelector(getArticlesPageIsLoading);
     const view = useSelector(getArticlesPageView);
     const error = useSelector(getArticlesPageError);
+    const page = useSelector(getArticlesPageNum);
 
     const onChangeView = useCallback(
         (view: ArticleView) => {
@@ -54,14 +57,18 @@ const ArticlesPage = (props: ArticlesPageProps) => {
         [dispatch]
     );
 
+    const onLoadNextPart = useCallback(() => {
+        dispatch(fetchNextArticlesPage());
+    }, [dispatch]);
+
     useInitialEffect(() => {
         dispatch(articlesPageActions.initState());
-        dispatch(fetchArticleLists({ page: 1 }));
+        dispatch(fetchArticlesList({ page: 1 }));
     });
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <Page>
+            <Page onScrollEnd={onLoadNextPart}>
                 <ArticleViewSelector view={view} onViewClick={onChangeView} />
                 <div className={classNames(cls.ArticlesPage, {}, [className])}>
                     <ArticleList

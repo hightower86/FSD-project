@@ -7,7 +7,7 @@ import { Article, ArticleView } from 'entities/Article';
 import { StateSchema } from 'app/providers/StoreProvider';
 import { ARTICLES_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage';
 import { ArticlesPageSchema } from '../types/articlesPageSchema';
-import { fetchArticleLists } from '../services/fetchArticleLists/fetchArticleLists';
+import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList';
 
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id,
@@ -50,19 +50,20 @@ const articlesPageSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchArticleLists.pending, (state) => {
+            .addCase(fetchArticlesList.pending, (state) => {
                 state.isLoading = true;
                 state.error = undefined;
             })
             .addCase(
-                fetchArticleLists.fulfilled,
+                fetchArticlesList.fulfilled,
                 (state, action: PayloadAction<Article[]>) => {
                     state.isLoading = false;
                     state.error = undefined;
-                    articlesAdapter.setAll(state, action.payload);
+                    articlesAdapter.addMany(state, action.payload);
+                    state.hasMore = action.payload.length > 0;
                 }
             )
-            .addCase(fetchArticleLists.rejected, (state, action) => {
+            .addCase(fetchArticlesList.rejected, (state, action) => {
                 state.isLoading = false;
                 state.error = action.payload;
             });

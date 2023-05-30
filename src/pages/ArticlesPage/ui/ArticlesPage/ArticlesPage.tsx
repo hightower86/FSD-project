@@ -17,6 +17,7 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { fetchArticleLists } from 'pages/ArticlesPage/model/services/fetchArticleLists/fetchArticleLists';
 import { useSelector } from 'react-redux';
 import { get } from 'http';
+import { Page } from 'shared/ui/Page/Page';
 import cls from './ArticlesPage.module.scss';
 import {
     articlesPageActions,
@@ -60,14 +61,16 @@ const ArticlesPage = (props: ArticlesPageProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducers}>
-            <ArticleViewSelector view={view} onViewClick={onChangeView} />
-            <div className={classNames(cls.ArticlesPage, {}, [className])}>
-                <ArticleList
-                    isLoading={isLoading}
-                    view={view}
-                    articles={articles}
-                />
-            </div>
+            <Page>
+                <ArticleViewSelector view={view} onViewClick={onChangeView} />
+                <div className={classNames(cls.ArticlesPage, {}, [className])}>
+                    <ArticleList
+                        isLoading={isLoading}
+                        view={view}
+                        articles={articles}
+                    />
+                </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };
